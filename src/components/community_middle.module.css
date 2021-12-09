@@ -1,0 +1,59 @@
+#Community_middle{
+    width:100%;
+    height:250px;
+    background-color: #E6EBF0;
+    position:relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap:wrap-reverse;
+}
+
+.search{
+    width:350px;
+    margin-bottom:30px;
+    border-radius:30px;
+    height:50px;
+    box-shadow: 0px 0px 5em -10px #646464;
+    background-color:white;
+    display:flex;
+    transition: 0.2s;
+}
+
+
+.search:hover{
+    width:370px;
+    /* box-shadow: 0px 0px 3em -5px #646464; */
+}
+
+.search_bar{
+    margin-left:30px;
+    background-color: transparent;
+    border:none;
+    font-size:16px;
+    font-weight:700;
+    width:95%;
+    transition: 0.2s;
+}
+
+.search_bar:focus{
+    outline:none;
+
+}
+/* .search_bar: */
+
+.search_bar input {
+    border: none;
+}
+
+
+.icon{
+    float:right;
+    margin-right:20px;
+    margin-top:17px;
+    width:5%;
+    transition: 0.2s;
+}
+.hashTag{
+
+}

@@ -97,10 +97,10 @@ ul{
 
 .sub_menu li{
     /* color:white; */
-    padding:5px 16px;
+    padding:6px 16px;
     border-radius:10px;
     /* background-color: #778B9F; */
-    font-size:11px;
+    font-size:12px;
     margin:2px;
     width:50px;
 }
@@ -120,14 +120,15 @@ ul{
 
 .profile{
     height:35px;
-    width:140px;
+    width:160px;
     background-color:#2E303D;
     padding:4px;
     border-radius: 30px;
     display:flex;
     align-items: center;
     /* margin-bottom:30px; */
-    margin-left:25px;
+    margin-left:3px;
+    cursor:pointer;
 }
 
 .profile_img img{

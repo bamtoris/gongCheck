@@ -4,14 +4,14 @@ import css from './header.module.css';
 
 function Header(){
     return(
-        <div id={css.header}>
+        <header id={css.header}>
         <nav className={css.header_wrap}>
             <div className={css.logo}>
-                <a href="#"><img src={logo} alt="logo"/></a>
+                <a href="/"><img src={logo} alt="logo"/></a>
             </div>
             <ul className={css.menu}>
-                <a href="#"><li>마이페이지</li></a>
-                <a href="#"><li>커뮤니티</li></a>
+                <a href="/"><li>마이페이지</li></a>
+                <a href="/community"><li>커뮤니티</li></a>
             </ul>
             <div className={css.account}>
                     <ul className={css.sub_menu}>
@@ -26,7 +26,7 @@ function Header(){
                 </div>
             </div> 
         </nav>
-    </div>
+    </header>
     );
 }
 

@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCog } from '@fortawesome/free-solid-svg-icons';
 import { faDoorOpen } from '@fortawesome/free-solid-svg-icons';
 
-const profile = <img src={profile_image} alt="profile image"/>
+const profile = profile_image
 
 const icon_faCog = <FontAwesomeIcon icon={faCog} />
 
@@ -30,7 +30,13 @@ function Header(){
             </ul>
             <div className={css.account}>
                 <ul className={css.sub_menu}>
-                    <a href="#"><li className={css.profile_img}>{profile}</li></a>
+                    <a href="#">
+                        <li className={css.profile_img}>
+                            <div className={css.img_clear}>
+                                <img src={profile} alt="profile image"/>
+                            </div>
+                        </li>
+                    </a>
                     <a href="#"><li>{icon_faCog}</li></a>
                     <a href="#"><li>{icon_faDoorOpen}</li></a>
                 </ul>

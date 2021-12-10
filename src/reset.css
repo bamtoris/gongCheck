@@ -30,6 +30,8 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	overflow-y:scroll;
+	/* background-color: #293158;  */
 }
 ol, ul {
 	list-style: none;
@@ -50,6 +52,19 @@ table {
 @font-face {
     font-family: 'NanumSquareR';
     src: local('NanumSquareR'), url("./fonts/NanumSquareR.otf") format('opentype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+
+@font-face {
+    font-family: 'NanumSquareB';
+    src: local('NanumSquareB'), url("./fonts/NanumSquareB.otf") format('opentype');
+    /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
+@font-face {
+    font-family: 'NanumSquareL';
+    src: local('NanumSquareL'), url("./fonts/NanumSquareL.otf") format('opentype');
     /* other formats include: 'woff2', 'truetype, 'opentype',
                               'embedded-opentype', and 'svg' */
 }

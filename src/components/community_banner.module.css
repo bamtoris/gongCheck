@@ -8,6 +8,7 @@
     align-items: center;
     /* flex-wrap:wrap-reverse; */
     flex-direction: column;
+    padding-top:80.5px;
 }
 
 .search{
@@ -35,10 +36,12 @@
     font-weight:700;
     width:95%;
     transition: 0.2s;
+    display:flex;
 }
 
 .search_bar:focus{
     outline:none;
+    
 
 }
 /* .search_bar: */

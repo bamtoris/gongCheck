@@ -1,8 +1,14 @@
+import Footer from "../components/Footer";
 import Header from "../components/Header";
+import MyPage_main from "../components/MyPage_main";
 
 function MyPage(){
     return(
-        <Header />
+        <div>
+            <Header />
+            <MyPage_main/>
+            <Footer/>
+        </div>
     );
 }
 

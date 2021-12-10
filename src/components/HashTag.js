@@ -2,8 +2,9 @@ import css from './hashTag.module.css';
 
 function HashTag(props){
     
-    let color = props.font_color;
+    let color = props.color;
 
+    let bg_color = "background-color: "+toString(color);
     // let font_color = toString('color:' + color);
 
     return(

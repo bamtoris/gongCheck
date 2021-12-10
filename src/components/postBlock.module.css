@@ -1,0 +1,50 @@
+
+.postBlock{
+    font-family:'NanumsquareR';
+
+    width:97%;
+    height:70px;
+    border-radius:10px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom:5px;
+    background-color:#F7F8FF;
+    transition: 0.3s;
+}
+
+.postBlock:hover{
+    background-color: #e6e8ff;
+}
+
+a {
+    cursor:pointer;
+}
+
+.postBlock:nth-child(2){
+    margin-top:10px;
+}
+
+.textBox{
+    margin-left:10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  
+}
+.postTitle{
+    margin-bottom:10px;
+    font-size:18px;
+    font-family: 'NanumsquareB';
+}
+.userName{
+    font-size:13px;
+    color:rgb(119, 119, 119);
+}
+
+.image{
+    margin-right:10px;
+    width:50px;
+    height:50px;
+    border-radius:10px;
+}

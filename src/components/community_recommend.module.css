@@ -1,14 +1,22 @@
 .recoContainer{
     margin-top:40px;
-    width:480px;
-    height:200px;
-    margin-bottom:40px;
+    width:475px;
+    /* height:200px; */
+    margin-bottom:20px;
+    padding:10px;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.recoContainer:hover{
+    box-shadow: -4px 0 50px -15px rgb(173, 186, 214);
 }
 
 .recoContainer h1{
     font-size:22px;
     font-family:'NanumSquareR';
-    font-weight: 700;
+    font-weight: 1000;
     line-height:25px;
     color:#243484;
 }

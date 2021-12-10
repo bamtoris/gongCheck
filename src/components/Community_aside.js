@@ -43,7 +43,7 @@ function Community_aside(){
 
 
     return(
-        <aside>
+        <aside className={css.aside}>
     {/* // 내 활동 부분 */}
             <div className={css.menuContainer}>
                 <h1 className={classNames(css.f_hi, css.title)}>내 활동</h1>

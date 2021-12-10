@@ -2,15 +2,16 @@
     color:#243484;
 }
 
-aside{
+.aside{
     margin-top:40px;
     /* text-align:center; */
-    display:flex;
-    flex-direction: column;
+    /* display:flex; */
+    /* flex-direction: column;
     justify-content: flex-end;
-    align-items: center;
+    align-items: center; */
     width:240px;
-    margin-left:20px;
+    margin-left:60px;
+    
 }
 
 .rankerContainer{
@@ -31,11 +32,12 @@ aside{
 .mainbtn{
     margin:5px;
     width:90px;
-    height:90px;
+    height:50px;
     background-color: #F7F8FF;
     color:#243484;
     font-size:16px;
     font-weight:bold;
+    
 
     border-radius: 10px;
     border:none;
@@ -54,7 +56,7 @@ aside{
     display:flex;
     flex-direction: column;
     /* width:180px; */
-    /* text-align: center; */
+    text-align: center;
     border:none;
     /* background-color:transparent; */   
     
@@ -68,7 +70,7 @@ aside{
 
 .title{
     font-weight:700;
-    margin: 20px 0px;
+    margin-bottom: 20px;
 }
 
 .btnBox{

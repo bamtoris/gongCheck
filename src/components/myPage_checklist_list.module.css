@@ -1,0 +1,18 @@
+.checklistBox{
+    background-color: white;
+    color:black;
+    font-weight: 700;
+    font-size:18px;
+    padding:10px 0;
+    width:100%;
+    height:30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:0.15s;
+}
+
+.checklistBox:hover{
+    background-color:#243484;
+    color:white;
+}

@@ -1,0 +1,142 @@
+.myPage_aside{
+    margin-left:0;
+    padding-top:80.5px;
+    min-width:300px;
+    max-width:400px;
+    width:30%;
+}
+
+.asideContainer{
+    /* width:300px; */
+    height:700px;
+    background-color:aliceblue;
+    margin:0;
+    padding:0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow:hidden;
+
+}
+
+h1{
+    font-size:24px;
+    font-weight: 700;
+    margin-top:20px;
+}
+
+.createBtn{
+    position: relative;
+    display:flex;
+    justify-content: center;
+
+}
+
+button{
+    margin-top:20px;
+    margin-bottom:20px;
+    background-color: darkred;
+    border:none;
+    cursor:pointer;
+    color:white;
+    border-radius:10px;
+    font-size:17px;
+    display: flex;
+    flex-direction: row;
+    
+    padding:7px;
+    transition:0.2s;
+}
+
+.createBtn button:hover {
+    background-color: rgb(204, 50, 50);
+}
+
+button span{
+    padding-left:5px;
+}
+
+.search{
+    width:80%;
+    height:20px;
+    background-color: rgb(218, 218, 218);
+    border-radius:30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:11px;
+    margin-bottom:20px;
+}
+
+.searchBar input{
+    outline: none;
+}
+.searchBar:focus{
+    
+}
+
+.searchBar{
+    background-color: transparent;
+    border:none;
+    font-size:16px;
+    font-weight:700;
+    margin-left:20px;
+    transition: 0.2s;
+    
+}
+
+.searchicon{
+    margin-left:5px;
+    margin-right: 5px;
+    color:grey;
+}
+.searchicon{
+    color:grey;
+}
+
+.searchBar:focus{
+    outline:none;
+
+}
+
+.hashTagBox{
+    width:100%;
+    
+    background-color: rgb(194, 194, 194);
+    position: relative;
+    /* overflow: hidden; */
+}
+
+.hashTag{
+    height:60px;
+    display:flex;
+    flex-wrap:nowrap;
+    /* height:50px; */
+    /* position: absolute; */
+    /* left:0;
+    top:0; */
+    justify-content: center;
+    overflow:hidden;
+    overflow-x:scroll;
+    overflow-y:hidden;
+
+}
+
+.hashTag::-webkit-scrollbar-thumb{
+    /* 스크롤바 막대 높이 설정 */ 
+    height: 17%;
+    background-color:rgba(255,255,255,1);
+     /* 스크롤바 둥글게 설정 */
+    border-radius: 10px;
+}
+
+
+.checklistContainer{
+    background-color: #243484;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}

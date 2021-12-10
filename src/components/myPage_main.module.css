@@ -1,0 +1,11 @@
+#MyPage_main{
+    font-family: 'NanumSquareR';
+    display:flex;
+    /* flex-direction: row; */
+    /* justify-content: center; */
+}
+
+
+#MyPage_aside{
+    width:30%;
+}

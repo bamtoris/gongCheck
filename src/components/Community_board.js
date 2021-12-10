@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import css from './community_board.module.css';
+import PostBlock from './PostBlock';
 
 function Community_board(props){
     return(
@@ -8,7 +9,7 @@ function Community_board(props){
                 <h1 className={classNames(css.title, css.f_hi)}>
                     인기있는 체크리스트
                 </h1>
-                <div className={classNames(css.postBlock, css.bg_select)}>
+                {/* <div className={classNames(css.postBlock, css.bg_select)}>
                     <div className={css.textBox}>
                         <div className={css.postTitle}>휴가철 차박 필수 아이템 체크리스트</div>
                         <div className={css.userName}>Car_camp_man</div>
@@ -16,16 +17,9 @@ function Community_board(props){
                     <div className={css.image}>
                         <img src="#" alt="image"/>
                     </div>
-                </div>
-                <div className={css.postBlock}>
-                    <div className={css.textBox}>
-                        <span className={css.postTitle}>휴가철 차박 필수 아이템 체크리스트</span>
-                        <span className={css.userName}>Car_camp_man</span>
-                    </div>
-                    <div className={css.image}>
-                        <img src="#" alt="image"/>
-                    </div>
-                </div>
+                </div> */}
+                <PostBlock title="휴가철 차박 필수 아이템 체크리스트" user="Car_camp_man"/>
+                <PostBlock title="휴가철 차박 필수 아이템 체크리스트" user="Car_camp_man"/>
             </div>  
         </div>
     );

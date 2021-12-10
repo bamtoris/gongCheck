@@ -1,0 +1,12 @@
+.tagBox {
+    margin:0px 3px;
+    margin-top:15px;
+    
+}
+.tag a{
+    padding:5px 10px;
+    background-color:green;
+    color:white;
+    border-radius:10px;
+    font-size:13px;
+}

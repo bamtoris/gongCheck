@@ -1,17 +1,18 @@
+// components
 import Header from "../components/Header";
-import Community_middle from "../components/Community_middle";
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import Community_banner from "../components/Community_banner";
+import Community_board from "../components/Community_board";
 
 
+import css from './community.module.css';
 
 function Community(){
     return(
-    <div>
+    <main>
         <Header/>
-        <Community_middle/>
-    </div>
+        <Community_banner/>
+        <Community_board/>
+    </main>
     );
 }
 

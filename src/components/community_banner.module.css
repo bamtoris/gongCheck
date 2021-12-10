@@ -6,7 +6,8 @@
     display:flex;
     justify-content: center;
     align-items: center;
-    flex-wrap:wrap-reverse;
+    /* flex-wrap:wrap-reverse; */
+    flex-direction: column;
 }
 
 .search{
@@ -54,6 +55,32 @@
     width:5%;
     transition: 0.2s;
 }
-.hashTag{
 
+.hashTagBox{
+    width:500px;
+    padding-bottom:3px;
 }
+
+.hashTag{
+    width:100%;
+    border-top: 1px solid rgb(190, 190, 190);
+    display:flex;
+}
+
+
+.title{
+    font-size:20px;
+    font-weight:700;
+    color: #646464;
+    padding:4px;
+    user-select: none;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }

@@ -1,0 +1,41 @@
+.f_hi{
+    color:#243484;
+}
+
+.bg_select2{
+    background-color:#e7eaff;
+}
+
+.rankerContainer{
+    display:flex;
+    width:200px;
+    /* height:30px; */
+    
+    justify-content: space-between;
+}
+
+.rankerBox{
+    
+    width:200px;
+    padding:10px;
+    margin:1px 0px;
+    border-radius: 10px;
+
+    font-size:15px;
+    font-weight:700;
+
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    
+}
+
+.name{
+    /* margin-right:10px; */
+    
+}
+
+.text{
+    
+}

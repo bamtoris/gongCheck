@@ -1,3 +1,11 @@
+.f_hi{
+    color:#243484;
+}
+
+.bg_select{
+    background-color:#F7F8FF;
+}
+
 .container{
     width:inhert;
     position:relative;
@@ -9,7 +17,7 @@
 .board{
     margin-top:40px;
     width:500px;
-    background-color:rgb(228, 235, 255);
+    /* background-color:rgb(228, 235, 255); */
     border-radius:10px;
     /* display:relative; */
     
@@ -22,7 +30,7 @@
     font-size:22px;
     font-weight:700;
     width:98%;
-    border-bottom:1px solid rgb(61, 61, 61);
+    border-bottom:1px solid #243484;
 
 }
 
@@ -36,7 +44,7 @@
     width:98%;
     height:70px;
     border-radius:10px;
-    background-color:rgb(231, 240, 253);
+    /* background-color:rgb(231, 240, 253); */
 
     display:flex;
     justify-content: space-between;
@@ -63,6 +71,6 @@
     margin-right:10px;
     width:50px;
     height:50px;
-    background-color:lightgrey;
+    /* background-color:lightgrey; */
     border-radius:10px;
 }

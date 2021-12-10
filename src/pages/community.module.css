@@ -1,3 +1,19 @@
-#community{
-    width:700px;
+.wrap{
+    margin:0 auto;
+    max-width:750px;
+    display:flex;
+}
+
+#banner{
+
+}
+
+#board{
+
+}
+
+#aside{
+    display: flex;
+    justify-content: center;
+    width:300px;
 }

@@ -1,0 +1,60 @@
+.f_hi{
+    color:#243484;
+}
+
+aside{
+    margin-top:40px;
+    /* text-align:center; */
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rankerContainer{
+    width:240px;
+}
+.menuContainer{
+    width:240px;
+}
+
+
+.title{
+    font-weight:700;
+    margin: 20px 0px;
+}
+
+.btnBox{
+    /* width:300px; */
+    width:220px;
+    height:30px;
+    background-color:#F7F8FF;
+    border-radius:10px;
+
+    display:flex;
+    align-items: center;
+    padding:5px 10px;
+    justify-content: space-between;
+
+    margin:5px 0px;
+
+}
+
+.btnBox>button{
+    width:180px;
+    text-align: center;
+    border:none;
+    background-color:transparent;
+    cursor:pointer;
+
+    font-size:14px;
+    font-weight: 700;
+}
+
+.title{
+    font-size:24px;
+}
+
+.icon{
+    color:#243484;
+}
+

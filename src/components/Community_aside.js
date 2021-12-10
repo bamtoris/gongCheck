@@ -2,25 +2,28 @@ import css from './community_aside.module.css';
 
 import classNames from 'classnames';
 
+import RankerBox from './RankerBox';
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-
 import { faUserTag } from '@fortawesome/free-solid-svg-icons';
 import { faClipboard } from '@fortawesome/free-solid-svg-icons';
 import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
-import RankerBox from './RankerBox';
+// import { faStickyNote } from '@fortawesome/free-solid-svg-icons';
+
+
 
 const icon_following = <FontAwesomeIcon className={css.icon} icon={faUserTag} />
 const icon_clipping = <FontAwesomeIcon className={css.icon} icon={faClipboard} />
 const icon_good = <FontAwesomeIcon className={css.icon} icon={faThumbsUp} />
+// const icon_new = <FontAwesomeIcon className={css.icon} icon={faStickyNote} />
 
 
 
 let rankers = [];
 
-let names =['가요이키우기', '신사임당', '장삐쭈', '잇섭', '흑우'];
-let followers = [197332, 29189, 10000, 9998, 777];
+let names =['CHECKLISTER','가요이키우기', '신사임당', '장삐쭈', '잇섭', '흑우'];
+let followers = ['FOLLOWERS', 197332, 29189, 10000, 9998, 777];
 
 function rankerPrint() {
     {for (let i=0;i<5;i++)
@@ -44,6 +47,10 @@ function Community_aside(){
     {/* // 내 활동 부분 */}
             <div className={css.menuContainer}>
                 <h1 className={classNames(css.f_hi, css.title)}>내 활동</h1>
+                <div className={css.mainbtnBox}>
+                    <button className={css.mainbtn}>글쓰기</button>
+                    <button className={css.mainbtn}>공유하기</button>
+                </div>
                 <div className={css.btnContainer}>
                     <div className={css.btnBox}>
                         {icon_following}
@@ -67,7 +74,10 @@ function Community_aside(){
     {/* // 체크리스터 랭킹 */} 
             <div className={css.rankerContainer}>
                 <h1 className={classNames(css.title, css.f_hi)}>체크리스터 랭킹</h1>
-                {rankers}
+                <div className={css.rankerBlock}>
+                    {rankers}
+                </div>
+                
             </div>
 
                     

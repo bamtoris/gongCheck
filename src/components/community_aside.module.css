@@ -7,15 +7,63 @@ aside{
     /* text-align:center; */
     display:flex;
     flex-direction: column;
+    justify-content: flex-end;
     align-items: center;
+    width:240px;
+    margin-left:20px;
 }
 
 .rankerContainer{
-    width:240px;
+    width:220px;
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-top:60px;
 }
 .menuContainer{
-    width:240px;
+    /* width:240px; */
 }
+
+.mainbtnBox{
+    display:flex;
+    justify-content: center;
+}
+.mainbtn{
+    margin:5px;
+    width:90px;
+    height:90px;
+    background-color: #F7F8FF;
+    color:#243484;
+    font-size:16px;
+    font-weight:bold;
+
+    border-radius: 10px;
+    border:none;
+    cursor:pointer;
+    
+    box-shadow: 0 0 24px -1px rgba(148, 165, 196, 0.445);
+
+    transition: 0.4s;
+}
+
+.mainbtn:nth-child(1){
+    background-color:#dbe6ff
+}
+
+.mainbtn button{
+    display:flex;
+    flex-direction: column;
+    /* width:180px; */
+    /* text-align: center; */
+    border:none;
+    /* background-color:transparent; */   
+    
+}
+.mainbtn:hover{
+    background-color: #243484;
+    color:white;
+}
+
 
 
 .title{
@@ -25,7 +73,7 @@ aside{
 
 .btnBox{
     /* width:300px; */
-    width:220px;
+    width:200px;
     height:30px;
     background-color:#F7F8FF;
     border-radius:10px;
@@ -36,7 +84,8 @@ aside{
     justify-content: space-between;
 
     margin:5px 0px;
-
+    transition: 0.1s;
+    box-shadow: 0 0 0px 0px white;
 }
 
 .btnBox>button{
@@ -50,11 +99,30 @@ aside{
     font-weight: 700;
 }
 
+.btnBox:hover{
+    background-color: #243484;
+    color:white;
+    box-shadow: 0 0 24px 2px rgba(148, 173, 221, 0.445);
+}
+.btnBox:hover button{
+    color:white;
+}
+.btnBox:hover .icon{
+    color:white;
+}
+
 .title{
-    font-size:24px;
+    font-size:22px;
 }
 
 .icon{
     color:#243484;
 }
 
+.rankerBlock{
+    width:40%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    align-items: flex-start;
+}

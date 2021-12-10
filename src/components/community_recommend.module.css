@@ -1,0 +1,110 @@
+.recoContainer{
+    margin-top:40px;
+    width:480px;
+    height:200px;
+    margin-bottom:40px;
+}
+
+.recoContainer h1{
+    font-size:22px;
+    font-family:'NanumSquareR';
+    font-weight: 700;
+    line-height:25px;
+    color:#243484;
+}
+
+
+
+.cardContainer{
+    margin-top:20px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.icon{
+    position:absolute;
+    z-index:4;
+    color:white;
+    border-radius:66px;
+    top:7px;
+    right:7px;
+    padding:5px;
+    height:15px;
+    transition: 0.5s;
+    background-color: rgba(255, 255, 255, 0.205);
+}
+
+.recoBox:hover .icon{
+    background-color:white;
+    color:#243484;
+}
+
+.shadowBox{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:2;
+
+    /* background-color: black; */
+    opacity: 25%;
+}
+
+.shadowBox2{
+    width:100%;
+    height:100%;
+    position:absolute;
+    z-index:2;
+    bottom:0;
+
+    opacity: 100%;
+    background: linear-gradient(225deg, rgba(2,0,36,0) 0%, rgba(51,53,102,1) 100%);
+}
+
+
+.recoBox{
+    position:relative;
+    width:150px;
+    border-radius:5px;
+    overflow:hidden;
+    height:200px;
+    cursor:pointer;
+}
+
+.recoBox p{
+    width:110px;
+    left:10px;
+    bottom:10px;
+
+    position:absolute;
+    color:rgb(255, 255, 255);
+    z-index:3;
+
+    font-size:15px;
+    font-weight: 700;
+    line-height: 20px;
+    transition: 0.3s;
+}
+
+.recoBox:hover p{
+    line-height: 23px;
+}
+
+.recoBox img{
+    width:200%;
+    display: block;
+
+    /* width: 60%; */
+    margin-left: auto;
+    margin-right: auto;
+    width: 200%;
+    z-index:1;
+    
+    transition: 0.3s;
+}
+
+.recoBox:hover img{
+    width:205%;
+}
+.recoBox:hover p{
+    font-size:19px;
+}

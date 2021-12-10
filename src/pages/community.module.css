@@ -1,7 +1,13 @@
+
+
 .wrap{
     margin:0 auto;
     max-width:750px;
     display:flex;
+    font-family: 'NanumSquareR';
+}
+.wrap>div{
+    margin:3px;
 }
 
 #banner{
@@ -13,7 +19,10 @@
 }
 
 #aside{
-    display: flex;
-    justify-content: center;
-    width:300px;
+
+}
+
+.section{
+    display:flex;
+    flex-direction: column;   
 }

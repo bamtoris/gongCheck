@@ -9,7 +9,7 @@ function RankerBox(props){
 
     return(
         <div className={css.rankerContainer}>
-            <div className={classNames(css.rankerBox, css.bg_select2)}>
+            <div className={classNames(css.bg_select2, css.rankerBox)}>
                 <p class={classNames(css.f_hi, css.name, css.text)}>{name}</p>
                 <p class={classNames(css.f_hi, css.follwer, css.text)}>{follower_count}</p>
             </div>

@@ -14,17 +14,13 @@ function PostBlock(props){
     }
 
     return(
-        <div className={css.postBlock}>
+        <a href={url} className={css.postBlock}>
             <div className={css.textBox}>
-                
-                    <span className={css.postTitle}><a href={url}>{title}</a></span>
-                
+                <span className={css.postTitle}>{title}</span>
                 <span className={css.userName}>{user}</span>
                 {imageBlock}
             </div>
-        
-            
-        </div>
+        </a>
     );
 }
 

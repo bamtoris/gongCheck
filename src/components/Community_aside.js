@@ -36,10 +36,14 @@ function rankerPrint() {
 
 
 
-function Community_aside(){
+function Community_aside(props){
 
     rankers = [];
     rankerPrint();
+
+    function modal_open(){
+        props.modal_open();
+    }
 
 
     return(
@@ -48,8 +52,7 @@ function Community_aside(){
             <div className={css.menuContainer}>
                 <h1 className={classNames(css.f_hi, css.title)}>내 활동</h1>
                 <div className={css.mainbtnBox}>
-                    <button className={css.mainbtn}>글쓰기</button>
-                    <button className={css.mainbtn}>공유하기</button>
+                    <button className={css.mainbtn} onClick={modal_open}>글쓰기</button>
                 </div>
                 <div className={css.btnContainer}>
                     <div className={css.btnBox}>

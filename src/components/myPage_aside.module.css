@@ -21,7 +21,7 @@
 
 }
 
-h1{
+.asideContainer h1{
     font-size:24px;
     font-weight: 700;
     margin-top:20px;
@@ -34,7 +34,7 @@ h1{
 
 }
 
-button{
+.asideContainer button{
     margin-top:20px;
     margin-bottom:20px;
     background-color: darkred;

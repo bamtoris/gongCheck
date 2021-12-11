@@ -11,7 +11,8 @@
     align-items: center; */
     width:240px;
     margin-left:60px;
-    
+    font-family:'NanumSquareR';
+    padding-bottom:90px;
 }
 
 .rankerContainer{
@@ -23,9 +24,7 @@
 }
 .menuContainer{
     /* width:240px; */
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
+    font-family:'NanumSquareR';
     
 }
 
@@ -35,12 +34,15 @@
 }
 .mainbtn{
     margin:5px;
-    width:90px;
+    margin-left:0;
+    width:190px;
+    padding:15px;
     height:50px;
-    background-color: #F7F8FF;
+    
     color:#243484;
-    font-size:16px;
+    font-size:24px;
     font-weight:bold;
+    text-align: center;
     
 
     border-radius: 10px;
@@ -53,15 +55,16 @@
 }
 
 .mainbtn:nth-child(1){
-    background-color:#dbe6ff
+    background-color:#cad9ff;
 }
 
-.mainbtn button{
+.mainbtn>button{
     display:flex;
     flex-direction: column;
     /* width:180px; */
     text-align: center;
     border:none;
+    padding:10px;
     /* background-color:transparent; */   
     
 }

@@ -8,7 +8,7 @@ function MyPage_main(){
     return(
         <main id={css.MyPage_main}>
             <MyPage_aside id={css.MyPage_aside}/>
-            <MyPage_section id={css.MyPage_section} title="방 청소 리스트"/>
+            <MyPage_section id={css.MyPage_section} title="방 청소 리스트" checklist="list"/>
         </main>
     );
 }

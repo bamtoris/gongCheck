@@ -4,6 +4,7 @@ import Community_banner from "../components/Community_banner";
 import Community_board from "../components/Community_board";
 import Community_aside from "../components/Community_aside";
 import Community_recommend from "../components/Community_recommend";
+import Modal from '../components/Modal';
 
 import css from './community.module.css';
 import Footer from "../components/Footer";
@@ -13,6 +14,7 @@ import Footer from "../components/Footer";
 function Community(){
     return(
     <div id="community">
+        <Modal/>
         <Header/>
         <Community_banner id={css.banner}/>
         <div className={css.wrap}>

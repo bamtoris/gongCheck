@@ -24,7 +24,7 @@ ul{
     background-color: white;
     /* background-color:lightgrey; */
     position: fixed;
-    z-index:999;
+    z-index:98;
     display: flex;
 
     justify-content: center;

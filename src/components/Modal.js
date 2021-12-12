@@ -1,9 +1,45 @@
 import { useState } from 'react';
-
+import Axios from 'axios';
 import css from './modal.module.css';
 import Modal_bg from './Modal_bg';
 
 function Modal(props){
+
+    function getPosts(){
+        Axios.post('http:localhost:3001/printPost', {
+            
+        });
+    }
+
+    const [post_id, setPost_id] = useState(0);
+    const [title, setTitle] = useState('');
+    const [writing, setwriting] = useState('');
+    const [checklist_id, setChecklist_id] = useState(0);
+
+    function createPost(){
+        Axios.interceptors.response.use(Axios.post("http://localhost:3001/createPost", {
+        post_id: post_id,
+        title: title,
+        writing: writing,
+        checklist_id: checklist_id
+    }), alert('error'));
+
+        // Axios.interceptors.post("http://localhost:3001/createPost", {
+        //     post_id: post_id,
+        //     title: title,
+        //     writing: writing,
+        //     checklist_id: checklist_id
+        // }).then((res) => {
+        //     alert(res.data);
+        // });
+    }
+
+    
+
+
+
+
+
 
     function modal_close(){
         props.modal_close();
@@ -63,7 +99,7 @@ function Modal(props){
                     </div>
                     <div className={css.write}>
                         <label>내용</label>
-                        <textarea name="textarea" required/>
+                        <textarea name="textarea"  required/>
                         {/* <input type="text"></input> */}
                     </div>
                     <div className={css.checklist}>
@@ -75,7 +111,7 @@ function Modal(props){
 
                     <div className={css.btnContainer}>
                         <button onClick={modal_close}>취소</button>
-                        <button type="submit">글쓰기</button>
+                        <button type="submit" onClick={createPost()}>글쓰기</button>
                     </div>
                 </form>
             </div>

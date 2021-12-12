@@ -1,3 +1,5 @@
+
+import Community_checklist from './Community_checklist';
 import css from './myPage_section.module.css';
 
 function MyPage_section(props){
@@ -17,15 +19,7 @@ function MyPage_section(props){
 
     return(
         <section id={css.myPage_section}>
-            <div className={css.wrap}>
-                <div id={css.title}>{title}</div>
-                <div className={css.subWrap}>
-                    <div id={css.checklist}>{list}</div>
-                    <div id={css.note}>{note}</div>
-                </div>
-                
-            </div>
-            
+            <Community_checklist title="차박 준비물"/>
         </section>
     );
 }

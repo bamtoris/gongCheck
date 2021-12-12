@@ -16,6 +16,12 @@
     box-shadow:inset -4px 0 50px -30px rgb(173, 186, 214);
 }
 
+.checklist:hover button{
+    background-color: #243484;
+    color:white;
+
+}
+
 .container{
     padding:20px;
     margin:10px;
@@ -58,8 +64,8 @@
     border-radius: 15px;
     font-weight: 500;
     font-size:13px;
-    background-color: #243484;
-    color:white;
+    
+    color:rgb(94, 94, 94);
     cursor:pointer;
     transition: 0.3s;
 }

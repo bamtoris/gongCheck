@@ -17,6 +17,7 @@ import Community_recommend from "../components/Community_recommend";
 import Modal from '../components/Modal';
 import Footer from "../components/Footer";
 import Community_checklist from '../components/Community_checklist';
+import CommentBlock from '../components/CommentBlock';
 
 
 // const icon_user = <FontAwesomeIcon className={css.icon} icon={faUserCircle} />
@@ -85,6 +86,10 @@ function Community_post(props){
         <div className={css.wrap}>
             <section className={css.section}>
                 <div id={css.post}>
+
+                    <div className={css.title}>
+                        <h1>{title}</h1>
+                    </div>
                     <div className={css.info}>
                         <div className={css.user}>
                             <span>{user}</span>
@@ -92,27 +97,29 @@ function Community_post(props){
                         <div className={css.date}>
                             <span>{date}</span>
                         </div>
-                        
-                    </div>
-                    <div className={css.title}>
-                        <h1>{title}</h1>
-                        
                     </div>
                     <div className={css.writing}>
                         <p>{writing}</p>
                     </div>
                     <Community_checklist/>
+                    <hr/>
                     
                     
-                    
-                    {/* <div className={css.comment}>
-
-                    </div> */}
-
-
+                    <div className={css.comment}>
+                        <h3>Comments</h3>
+                        <CommentBlock addComment={false}
+                        user = '헤로운 헬로'
+                        comment = '차박차박바차바가차박차박차바가차가박차박차박차. 모든 일에 박차를 가해봐'
+                        list = "고기 한 점"
+                        list_good_count = {35}
+                        />
+                        <CommentBlock addComment={true}/>
+                    </div>
                 </div>
             </section>
             
+
+
             <Community_aside id={css.aside} modal_open={modal_open} modal_close={modal_close}/>
         </div>
         <Footer/>

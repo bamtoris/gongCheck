@@ -24,7 +24,7 @@ function MyPage_aside(){
     function createChecklist() {
 
         Axios.post("http://localhost:3001/createChecklist").then(() => {
-            alert('success');
+            window.location.reload();
         });
     };
 
@@ -91,6 +91,15 @@ function MyPage_aside(){
                 </div>
                 <div className={css.hashTagBox}>
                     <div className={css.hashTag}>
+                        <HashTag name="여행" color='red' />
+                        <HashTag name="차박" color='orange' font='white' />
+                        <HashTag name="2021년_후회하는_것들" color='grey'/>
+                        <HashTag name="올해_연말_영화_리스트" color='blue'/>
+                        <HashTag name="겨울여행" color='skyblue' font="black"/>
+                        {/* <HashTag name="봄봄봄" color='green'/> */}
+                        <HashTag name="자기계발_도서목록" color='cadetblue' />
+                        <HashTag name="2021_GOTY" color='purple' />
+                        <HashTag name="2022_새해소망" color='coral' />
                         <HashTag name="청소"/>
                         <HashTag name="작업"/>
                         <HashTag name="과제"/>

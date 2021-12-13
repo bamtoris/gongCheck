@@ -28,7 +28,7 @@ function App() {
     <Routes>
       <Route path="/" element={<MyPage />}/>
       <Route path="/community" element={<Community/>}/>
-      <Route path='/community/1' element={<Community_post url="/community/1" />}/>
+      {/* <Route path='/community/1' element={<Community_post url="/community/1" />}/> */}
       {
         posts.map((post) => {
             return <Route path={"/community/"+post.post_id} element={<Community_post url={post.post_id} title={post.title} name={post.user_name} writing={post.post_write} checklist_id={post.checklist_id}/>}/>})

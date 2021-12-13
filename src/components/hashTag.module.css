@@ -1,6 +1,8 @@
 .tagBox {
     margin:0px 3px;
     margin-top:15px;
+    display:flex;
+    flex-wrap: wrap;
     
 }
 .tag a{

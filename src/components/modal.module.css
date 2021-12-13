@@ -145,6 +145,7 @@
     width:300px;
     background-color: lightgrey;
     color:black;
+    /* transition: 0.3s; */
 }
 
 .dropList>select:hover{

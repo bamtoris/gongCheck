@@ -63,9 +63,12 @@
     width:500px;
     padding-bottom:3px;
     
+    
 }
 
 .hashTag{
+    display: flex;
+    flex-wrap: wrap;
     width:100%;
     border-top: 1px solid #24348456;
     display:flex;

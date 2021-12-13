@@ -79,8 +79,8 @@ function Community_post(props){
                     <div className={css.comment}>
                         <h3>Comments</h3>
                         <CommentBlock addComment={false}
-                        user = '헤로운 헬로'
-                        comment = '차박차박바차바가차박차박차바가차가박차박차박차. 모든 일에 박차를 가해봐'
+                        user = '스노우맨'
+                        comment = '고기도 잡수셔야지.'
                         list = "고기 한 점"
                         list_good_count = {35}
                         />

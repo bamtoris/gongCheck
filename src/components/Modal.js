@@ -3,6 +3,8 @@ import Axios from 'axios';
 import css from './modal.module.css';
 import Modal_bg from './Modal_bg';
 import { faAmericanSignLanguageInterpreting } from '@fortawesome/free-solid-svg-icons';
+import 'animate.css';
+import classNames from 'classnames';
 
 function Modal(props){
 
@@ -74,6 +76,9 @@ function Modal(props){
         // });
 
     function modal_close(){
+        // this.classNames += "animate__animated";
+        // this.className += ;
+        // this.className += "animate__fadeOut";
         props.modal_close();
     }
 
@@ -117,7 +122,7 @@ function Modal(props){
     }
 
     return(        
-        <div className={css.modal}>
+        <div className={classNames("animate__animated", "animate__fadeIn", css.modal)}>
             <Modal_bg onClick={modal_close}/>
             <div className={css.container}>
                 <h1>글쓰기</h1>

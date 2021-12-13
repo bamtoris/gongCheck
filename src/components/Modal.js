@@ -27,7 +27,7 @@ function Modal(props){
                     writing: writing
                 }).then(() => {
                     window.location.reload('/community');
-                    alert("글만 생성");
+                    // alert("글만 생성");
                 });
             }
             else{
@@ -37,7 +37,7 @@ function Modal(props){
                 checklist_id: checklist_id
                 }).then(() => {
                     window.location.reload('/community');
-                    alert("체크리스트 포함된 글 생성");
+                    // alert("체크리스트 포함된 글 생성");
                 })
 
             }

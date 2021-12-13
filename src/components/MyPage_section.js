@@ -6,7 +6,7 @@ function MyPage_section(props){
 
     const title = props.title;
     const list = props.checklist;
-    const note = props.note;
+    // const note = props.note;
 
     let checklist = [];
 
@@ -19,7 +19,7 @@ function MyPage_section(props){
 
     return(
         <section id={css.myPage_section}>
-            <Community_checklist title="차박 준비물" isMy={true}/>
+            <Community_checklist title={title} list={list} isMy={true}/>
         </section>
     );
 }

@@ -23,12 +23,13 @@ import CommentBlock from '../components/CommentBlock';
 
 function Community_post(props){
 
-    const url = props.url;
+    // const url = props.url;
     let title = props.title;
     let user = props.name;
     // let date = props.date;
     let writing = props.writing;
     let checklist_id = props.checklist_id;
+    let post_id = props.url;
 
     // function
     // function finding_me(){
@@ -68,7 +69,7 @@ function Community_post(props){
                             <span>{user}</span>
                         </div>
                         <div className={css.date}>
-                            {/* <span>{date}</span> */}
+                            post_id - {post_id}
                         </div>
                     </div>
                     <div className={css.writing}>

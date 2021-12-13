@@ -10,9 +10,9 @@ function MyPage_aside_listBlock(props){
     // let list = props.checklist_list;
     
     return(
-        <div className={css.title}>
+        <a className={css.title}>
             <a href="#">{title}</a>
-        </div>
+        </a>
     );
 }
 

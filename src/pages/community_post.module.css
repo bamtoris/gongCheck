@@ -83,6 +83,9 @@
     display: flex;
     flex-direction: column;
     align-items: left;
+    /* -webkit-user-select: auto; */
+    user-select:all;
+    /* -webkit-user-drag: none; */
 
     transition: 0.3s;
     

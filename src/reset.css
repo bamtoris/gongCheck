@@ -68,3 +68,9 @@ table {
     /* other formats include: 'woff2', 'truetype, 'opentype',
                               'embedded-opentype', and 'svg' */
 }
+
+a, input, button, h1 {
+	-webkit-user-select: auto;
+  user-select: none;
+  -webkit-user-drag: none;
+}

@@ -6,7 +6,12 @@
     background-color:#e7eaff;
 } */
 
+
+
 .rankerContainer{
+    -webkit-user-select: auto;
+    user-select: none;
+    -webkit-user-drag: none;
     display:flex;
     width:220px;
     /* height:30px; */
@@ -65,6 +70,7 @@
 
 .name{
     /* margin-right:10px; */
+    cursor:pointer;
     
 }
 

@@ -1,4 +1,6 @@
 import css from "./community_banner.module.css";
+import 'animate.css';
+import classNames from "classnames";
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
@@ -6,9 +8,12 @@ import HashTag from "./HashTag";
 
 const icon_faSearch = <FontAwesomeIcon icon={faSearch}/>
 
+
+
+
 function Community_banner(props){
     return(
-        <div id={css.Community_middle}>
+        <div id={css.Community_middle} className={classNames("animate__animated", "animate__fadeInDown", css.aside)}>
             <div class={css.search}>
                 <input class={css.search_bar} defaultValue={props.search} type="search"/>
                 <div class={css.icon}>

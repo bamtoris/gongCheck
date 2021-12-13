@@ -47,7 +47,7 @@ function Community_aside(props){
 
 
     return(
-        <aside className={css.aside}>
+        <aside className={classNames("animate__animated", "animate__fadeInRight", css.aside)}>
     {/* // 내 활동 부분 */}
             <div className={css.menuContainer}>
                 <h1 className={classNames(css.f_hi, css.title)}>내 활동</h1>

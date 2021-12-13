@@ -1,6 +1,7 @@
 // inner package
 import { useState } from 'react';
 import Axios from 'axios';
+import classNames from 'classnames';
 //  css
 import css from './community_post.module.css';
 
@@ -58,7 +59,7 @@ function Community_post(props){
         <Header/>
         <Community_banner id={css.banner}/>
         <div className={css.wrap}>
-            <section className={css.section}>
+            <section className={classNames("animate__animated", "animate__fadeInUp", css.section)}>
                 <div id={css.post}>
 
                     <div className={css.title}>

@@ -1,4 +1,4 @@
-
+import classNames from 'classnames';
 import Community_checklist from './Community_checklist';
 import css from './myPage_section.module.css';
 
@@ -18,7 +18,7 @@ function MyPage_section(props){
 
 
     return(
-        <section id={css.myPage_section}>
+        <section id={css.myPage_section} className={classNames("animate__animated", "animate__fadeIn")}>
             <Community_checklist title={title} list={list} isMy={true}/>
         </section>
     );

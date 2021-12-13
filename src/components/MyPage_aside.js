@@ -1,8 +1,8 @@
 import { useState, useMemo, useCallback, useEffect } from 'react';
 import Axios from 'axios';
-
+import 'animate.css';
 import css from './myPage_aside.module.css';
-
+import classNames from 'classnames';
 import HashTag from './HashTag';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -77,7 +77,7 @@ function MyPage_aside(props){
         <div className={css.new}>
 
         
-        <div id={css.wrap}>
+        <div id={css.wrap} className={classNames("animate__animated", "animate__fadeInLeft")}>
             <aside className={css.myPage_aside}>
                 <div class={css.asideContainer}>
                     <h1>CHECKLIST</h1>

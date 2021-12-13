@@ -7,6 +7,7 @@ import classNames from 'classnames';
 import css from './community_board.module.css';
 import PostBlock from './PostBlock';
 
+import 'animate.css';
 
 
 let urls = [1];
@@ -38,7 +39,7 @@ function Community_board(props){
     // posts = [];
 
     return(
-        <div className={css.board}>
+        <div className={classNames("animate__animated", "animate__fadeInUp", css.board)}>
             <div className={css.postContainer}>
                 <h1 className={classNames(css.title, css.f_hi)}>
                     인기있는 체크리스트

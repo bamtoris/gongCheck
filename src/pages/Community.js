@@ -11,7 +11,8 @@ import Modal from '../components/Modal';
 import css from './community.module.css';
 import Footer from "../components/Footer";
 
-
+import 'animate.css';
+import classNames from 'classnames';
 
 function Community(){
 
@@ -31,7 +32,7 @@ function Community(){
         <Community_banner id={css.banner}/>
         <div className={css.wrap}>
             <section className={css.section}>
-                <Community_recommend/>
+                <Community_recommend />
                 <Community_board id={css.board}/>
             </section>
             

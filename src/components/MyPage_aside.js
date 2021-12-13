@@ -40,7 +40,7 @@ function MyPage_aside(props){
     function getMyChecklist() {
         // let checklist_array = [];
         let data = [];
-        Axios.get("http://localhost:3001/getMyChecklist").then((res) => {
+        Axios.post("http://localhost:3001/getMyChecklist").then((res) => {
             setChecklist(res.data);
             
         });

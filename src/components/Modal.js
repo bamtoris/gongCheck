@@ -59,7 +59,7 @@ function Modal(props){
     // };
 
     const get_myChecklist = () => {
-        Axios.get("http://localhost:3001/getMyChecklist").then((res) => {
+        Axios.post("http://localhost:3001/getMyChecklist").then((res) => {
             setChecklist(res.data)});
         console.log(checklist);
         };

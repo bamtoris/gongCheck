@@ -15,7 +15,7 @@ function Community_recommend(){
     return(
         
         <div className={css.recoContainer}>
-            <h1>"Daniel"님,<br/>이건 어떠신가요?</h1>
+            <h1><strong>Daniel</strong>님,<br/>이건 어떠신가요?</h1>
             <div className={css.cardContainer}>
                 <div className={css.recoBox}>
                     <div className={css.icon}>{icon_arrow}</div>

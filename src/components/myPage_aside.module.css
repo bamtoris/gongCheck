@@ -4,6 +4,7 @@
     min-width:300px;
     max-width:400px;
     width:30%;
+    /* height: */
     
     border-right:0.5px solid rgba(160, 160, 160, 0.747);
 }
@@ -152,4 +153,5 @@ button span{
     display:flex;
     flex-direction: row;
     flex-wrap: nowrap;
+    height:100%;
 }

@@ -23,6 +23,9 @@
     color:#243484;
 }
 
+.recoContainer>h1>strong{
+    font-family: 'NanumSquareB';
+}
 
 
 .cardContainer{

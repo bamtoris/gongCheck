@@ -18,7 +18,7 @@ function Modal(props){
 
     const createPost = () => {
         if(title == '' || writing == ''){
-            alert('제목, 내용 중에서 빈칸이 존재합니다.');
+            alert('제목, 내용 중에서 빈 칸이 존재합니다.');
         }
         else{
             if(checklist_id == null){

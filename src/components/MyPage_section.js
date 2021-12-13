@@ -19,7 +19,7 @@ function MyPage_section(props){
 
     return(
         <section id={css.myPage_section}>
-            <Community_checklist title="차박 준비물"/>
+            <Community_checklist title="차박 준비물" isMy={true}/>
         </section>
     );
 }

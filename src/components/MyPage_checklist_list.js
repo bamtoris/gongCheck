@@ -7,7 +7,7 @@ function MyPage_checklist_list(props){
     return(
         <a href="#">
             <div className={css.checklistBox}>
-                <h3>{name}</h3>
+                <h3>dwawdadw</h3>
             </div>
         </a>
     );

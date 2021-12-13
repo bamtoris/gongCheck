@@ -3,7 +3,7 @@ import css from './postBlock.module.css';
 function PostBlock(props){
 
     const title = props.title;
-    const user = props.user;
+    const user = props.user_name;
     const image = props.image;
     const url = props.url;
 
@@ -14,7 +14,7 @@ function PostBlock(props){
     }
 
     return(
-        <a href={url} className={css.postBlock}>
+        <a href={"/community/"+url} className={css.postBlock}>
             <div className={css.textBox}>
                 <span className={css.postTitle}>{title}</span>
                 <span className={css.userName}>{user}</span>

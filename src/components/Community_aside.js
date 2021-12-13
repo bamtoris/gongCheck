@@ -22,7 +22,7 @@ const icon_good = <FontAwesomeIcon className={css.icon} icon={faThumbsUp} />
 
 let rankers = [];
 
-let names =['CHECKLISTER','가요이키우기', '신사임당', '장삐쭈', '잇섭', '흑우'];
+let names =['CHECKLISTER','방탄소년단', 'knowman', '다함께 차차차', '차박몬', '흑우'];
 let followers = ['FOLLOWERS', 197332, 29189, 10000, 9998, 777];
 
 function rankerPrint() {
@@ -82,17 +82,7 @@ function Community_aside(props){
                 </div>
                 
             </div>
-
-                    
-
-
-                
-            
         </aside>
-
-
-        
-
     );
 }
 

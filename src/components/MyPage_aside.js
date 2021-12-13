@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import Axios from 'axios';
 
 import css from './myPage_aside.module.css';
@@ -19,8 +19,6 @@ function MyPage_aside(){
 
     let checklist_array = [];
 
-    let checklistBlock = [];
-
     const name = 'daniel';
 
     function createChecklist() {
@@ -29,26 +27,56 @@ function MyPage_aside(){
             alert('success');
         });
     };
-    
-    function get_myChecklist(){
+
+    const [checklist, setChecklist] = useState([]);
+
+    let checklistBlock = [];
+
+    // 내 체크리스트 불러오기
+    const getMyChecklist = () => {
         Axios.get("http://localhost:3001/getMyChecklist").then((res) => {
-            checklist_array.push(res.data[0]);
-            // console.log(checklist_array);
-        });
+            setChecklist(res.data);}); console.log("start")};
 
-        // print on aside menu
-        for(let obj of checklist_array){
-            // console.log(obj);
-            checklistBlock.push(<MyPage_aside_listBlock checklist={obj} />);
-        }
+    useEffect(() => {
+        getMyChecklist();
+    }, [])
+    
+    // 고민의 흔적..
+    // function getMyChecklist(){
+    //     Axios.get("http://localhost:3001/getMyChecklist").then((res) => {
+    //     setChecklist(res.data);
+    //     // console.log(checklist);
+    //     });
+    // }
 
-        console.log(checklistBlock);
-       
-    }
+    // getMyChecklist();
+    
 
+    // function get_myChecklist(){
+    //     Axios.get("http://localhost:3001/getMyChecklist").then((res) => {
+    //         setChecklist(res.data);
+    //         // console.log(checklist);
+    //         });
+    // };
 
-    get_myChecklist();
+    // get_myChecklist();
 
+    // function print_checklist(){
+        
+    //     checklist.map((check) => {
+    //         return <div> {check.checklist_title} </div>;
+    //         return <MyPage_aside_listBlock user_id={check.user_id} userName={check.user_name} checklist_id={check.checklist_id} checklist_list={check.checklist_list} checklist_title={check.checklist_title} />;
+    //     });    
+    //     // alert("suceess");
+    // }
+
+    // function handleSubmit(e) {
+    //     e.preventDefault();
+    //     console.log('You clicked submit.');
+    //   }
+    //   handleSubmit(get_myChecklist());
+    
+    
     return(
         <aside className={css.myPage_aside}>
             <div class={css.asideContainer}>
@@ -72,7 +100,12 @@ function MyPage_aside(){
                     </div>
                 </div>
                 <div className={css.checklistContainer}>
-                    {checklistBlock}
+                    {
+                        checklist.map((check) => {
+                            return <MyPage_aside_listBlock user_id={check.user_id} userName={check.user_name} checklist_id={check.checklist_id} checklist_list={check.checklist_list} checklist_title={check.checklist_title}/>;
+                        })
+                    }
+                    
                 </div>
             </div>
         </aside>

@@ -1,35 +1,41 @@
-import { Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Routes, Route, useSearchParams } from 'react-router-dom';
+
+import Axios from 'axios';
 
 import classNames from 'classnames';
 import css from './community_board.module.css';
 import PostBlock from './PostBlock';
 
 
+
 let urls = [1];
 let titles = ["휴가철 차박 필수 아이템 체크리스트"];
 let users = ["차박몬"];
 
-let posts = [];
 
-function create_posts(){
-    for(let i=0;i<urls.length;i++){
-        let urls_paste = 'community/' + urls[i];
-        posts.push(<PostBlock title={titles[i]} user={users[i]} url={urls_paste}/>);
-    }
-}
-
-// function print_posts(){
-//     <Routes>
-//         for (let post of posts){
-//             post
-//         }
-//     </Routes>
-// }
 
 function Community_board(props){
+    let [posts, setPosts] = useState([]);
 
-    posts = [];
-    create_posts();
+    function getPosts(){
+        Axios.get('http://localhost:3001/printPost').then((res) => {
+            setPosts(res.data);
+            
+        });
+    }
+    
+
+    useEffect(()=>{
+        getPosts();
+        console.log(posts);
+    }, [])
+
+
+    // console.log(posts);
+    // posts = [];
+    
+    // posts = [];
 
     return(
         <div className={css.board}>
@@ -37,8 +43,10 @@ function Community_board(props){
                 <h1 className={classNames(css.title, css.f_hi)}>
                     인기있는 체크리스트
                 </h1>
-
-                {posts}
+                {
+                    posts.map((post) => {
+                        return <PostBlock url={post.post_id} post_id={post.post_id} title={post.title} user_name={post.user_name} post_write={post.post_write} checklist_id={post.checklist_id}/>})
+                }
             </div>  
         </div>
     );

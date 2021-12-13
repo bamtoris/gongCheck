@@ -1,28 +1,68 @@
-import { useState } from 'react';
+import { useState, useMemo, useCallback, useEffect } from 'react';
 import Axios from 'axios';
 import css from './modal.module.css';
 import Modal_bg from './Modal_bg';
+import { faAmericanSignLanguageInterpreting } from '@fortawesome/free-solid-svg-icons';
 
 function Modal(props){
 
-    function getPosts(){
-        Axios.post('http:localhost:3001/printPost', {
-            
-        });
-    }
-
-    const [post_id, setPost_id] = useState(0);
+    // const [post_id, setPost_id] = useState(0);
     const [title, setTitle] = useState('');
     const [writing, setwriting] = useState('');
-    const [checklist_id, setChecklist_id] = useState(0);
+    const [checklist_id, setChecklist_id] = useState(null);
+    
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log('You clicked submit.');
+      }
 
-    function createPost(){
-        Axios.interceptors.response.use(Axios.post("http://localhost:3001/createPost", {
-        post_id: post_id,
-        title: title,
-        writing: writing,
-        checklist_id: checklist_id
-    }), alert('error'));
+    const createPost = () => {
+        if(title == '' || writing == ''){
+            alert('제목, 내용 중에서 빈칸이 존재합니다.');
+        }
+        else{
+            if(checklist_id == null){
+                Axios.post("http://localhost:3001/createPost", {
+                    title: title,
+                    writing: writing
+                }).then(() => {
+                    window.location.reload('/community');
+                    alert("글만 생성");
+                });
+            }
+            else{
+                Axios.post("http://localhost:3001/createPost_checklist", {
+                title: title,
+                writing: writing,
+                checklist_id: checklist_id
+                }).then(() => {
+                    window.location.reload('/community');
+                    alert("체크리스트 포함된 글 생성");
+                })
+
+            }
+            
+        }
+    }
+
+    function createPost_checklist(){
+        
+    }
+
+
+    const [checklist, setChecklist] = useState([]);
+
+    // function get_myChecklist(){
+            
+    // };
+
+    const get_myChecklist = () => {
+        Axios.get("http://localhost:3001/getMyChecklist").then((res) => {
+            setChecklist(res.data)});
+        console.log(checklist);
+        };
+
+
 
         // Axios.interceptors.post("http://localhost:3001/createPost", {
         //     post_id: post_id,
@@ -32,86 +72,77 @@ function Modal(props){
         // }).then((res) => {
         //     alert(res.data);
         // });
-    }
-
-    
-
-
-
-
-
 
     function modal_close(){
         props.modal_close();
     }
 
-
     const [isCheck, setIsCheck] = useState(false);
     
-    function isCheckbox(e) {
-        if(e.target.checked == true)
-            setIsCheck(true);
-        else
-            setIsCheck(false);
-        // console.log(isChecklistClipping);
-    }
-
-    function get_myChecklist(){
-        return(
-            // db에서 가져온 나의 체크리스트들을 다음과 같이 출력
-            <select name="myChecklit" id="checklist-select" className={css.droplist} required>
-                    <option value="">공유할 체크리스트를 선택하세요</option>
-                    <option value="dog">Dog</option>
-                    <option value="cat">Cat</option>
-                    <option value="hamster">Hamster</option>
-                    <option value="parrot">Parrot</option>
-                    <option value="spider">Spider</option>
-                    <option value="goldfish">Goldfish</option>
-            </select>
-
-        );
-    }
-
-    
     function print_checklist() {
-        if(isCheck == true){ 
-            // 내 체크리스트 셀렉션
-            return(
-                <div className={css.selectContainer}>
-                    {/* <label for="checklist-select">공유할 체크리스트를 선택하세요</label> */}
-                    {get_myChecklist()}
-                </div>
-            );
-        }
-
+        return(
+                <select name="myChecklist" id="checklist-select" className={css.droplist} required onChange={(e) => {setChecklist_id(e.target.value)}}>
+                    <option value={null}>checklist를 선택하세요</option>
+                    {
+                        checklist.map((check) => {
+                            return <option key={check.checklist_id} value={check.checklist_id}>{check.checklist_title}</option>;
+                        })
+                    }
+                    
+                </select>
+        );
+        
     }
 
-    return(
-        
+
+    useEffect(()=>{
+        get_myChecklist();
+    }, [])
+    // useEffect(()=>{
+    //     print_checklist();
+    // }, [])
+
+    function handleCheckbox(){
+        // let isCheck_value = e.target.checked;
+        if(isCheck == false){
+            setIsCheck(true);
+            console.log("checklist 나옴" + isCheck);
+        }
+            
+        else{
+            setIsCheck(false);
+            console.log("checklist 사라짐" + isCheck);
+        }
+            
+    }
+
+    return(        
         <div className={css.modal}>
             <Modal_bg onClick={modal_close}/>
             <div className={css.container}>
                 <h1>글쓰기</h1>
-                <form>
+                <form onSubmit={handleSubmit}>
                     <div className={css.title}>
                         <label>제목</label>
-                        <input type="text" required/>
+                        <input type="text" onChange={(event)=>setTitle(event.target.value)} required/>
                     </div>
                     <div className={css.write}>
                         <label>내용</label>
-                        <textarea name="textarea"  required/>
+                        <textarea name="textarea" onChange={(event)=>setwriting(event.target.value)} required/>
                         {/* <input type="text"></input> */}
                     </div>
                     <div className={css.checklist}>
                         <div className={css.checkList_ui}>
-                            <input type="checkbox" onChange={e => isCheckbox(e)} id={css.checklist} name="checklist" value="Checklist 공유하기"/><label for="Checklist">Checklist 공유하기</label>
+                            <input type="checkbox" onClick={(e) => {handleCheckbox()}} id={css.checklist} name="checklist" value="Checklist 공유하기"/><label for="Checklist">Checklist 공유하기</label>
                         </div>
-                        {print_checklist()}
+                        <div className={css.selectContainer}>
+                            {isCheck ? print_checklist() :null}
+                        </div>
                     </div>
 
                     <div className={css.btnContainer}>
                         <button onClick={modal_close}>취소</button>
-                        <button type="submit" onClick={createPost()}>글쓰기</button>
+                        <button type="submit" onClick={()=>{createPost()}}>글쓰기</button>
                     </div>
                 </form>
             </div>
